@@ -1,0 +1,54 @@
+.video-card {
+  width: 280px;
+  margin-bottom: 30px;
+}
+
+.card-info {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.video-info-text > h6 {
+  font-size: 15px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.video-info-text > p {
+  font-size: 12px;
+  font-weight: 400px;
+}
+
+.thumbnail-image {
+  width: 250px;
+  height: 150px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  transition: 1.2s;
+  cursor: pointer;
+}
+
+.thumbnail-image:hover {
+  transform: scale(1.2);
+  z-index: 1.2;
+}
+
+.profile {
+  border-radius: 30px;
+}
+
+@media screenand and (max-width: 767px) {
+  .video-card {
+    width: 100%;
+    flex-grow: 0;
+  }
+
+  #thumbnail {
+    width: 100%;
+  }
+
+  .video-card > img {
+    width: 100%;
+  }
+}

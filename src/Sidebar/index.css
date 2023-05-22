@@ -1,0 +1,37 @@
+.sidebar-container {
+  width: 20%;
+  border-right: none;
+  height: 100vh;
+  padding: 5px;
+}
+
+.unordered-list {
+  padding-left: 0px;
+  width: 100%;
+}
+
+.list-items {
+  list-style-type: none;
+  display: flex;
+  font-weight: 500;
+}
+
+.list-items:hover {
+  cursor: pointer;
+  background-color: rgb(183, 176, 176);
+  font-weight: 700;
+}
+
+@media screen and (max-width: 767px) {
+  .icons {
+    font-size: 15px;
+  }
+
+  .icon-name {
+    font-size: 10px;
+  }
+
+  .sidebar-container {
+    display: none;
+  }
+}

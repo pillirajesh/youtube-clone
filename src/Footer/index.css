@@ -1,0 +1,16 @@
+.footer-container {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-container {
+    display: block;
+  }
+
+  .footer-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
