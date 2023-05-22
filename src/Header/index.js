@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
 import {
@@ -16,11 +17,13 @@ const Header = () => {
     <div className="header-container">
       <div className="header-left-part">
         <GiHamburgerMenu className="mr-3" />
-        <img
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png"
-          alt="youtube"
-          className="header-youtube-image"
-        />
+        <Link to="/" className="link">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Logo_of_YouTube_%282015-2017%29.svg/2560px-Logo_of_YouTube_%282015-2017%29.svg.png"
+            alt="youtube"
+            className="header-youtube-image"
+          />
+        </Link>
       </div>
       <div className="header-middle-part">
         <input
@@ -30,7 +33,9 @@ const Header = () => {
           value={inputSearch}
           onChange={(e) => search(e.target.value)}
         />
-        <BiSearch className=" mr-4 icons search" />
+        <Link to={`/search/${inputSearch}`} className="link">
+          <BiSearch className=" mr-4 icons search" />
+        </Link>
       </div>
       <div className="header-right-part">
         <MdVideoCall className="mr-3 icons" />
@@ -46,7 +51,6 @@ const Header = () => {
       <div className="mobile-part">
         <MdCast className="mr-3 icons" />
         <MdNotifications className="mr-3 icons" />
-        <BiSearch className="mr-3 icons" />
 
         <img
           src="https://res.cloudinary.com/djoz0tmyl/image/upload/v1684313904/photo_-_Copy_c7lkcw.jpg"
