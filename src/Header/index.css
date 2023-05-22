@@ -6,10 +6,9 @@
   position: sticky;
   top: 0;
   background-color: white;
-  width: 100%;
 }
 
-.hidden {
+.mobile-part {
   display: none;
 }
 
@@ -32,7 +31,7 @@
 }
 
 .header-youtube-image {
-  width: 80px;
+  object-fit: contain;
   height: 25px;
   margin-right: 20px;
 }
@@ -70,11 +69,29 @@
 }
 
 @media screen and (max-width: 767px) {
-  .header-right-part {
+  .header-middle-part {
     display: none;
   }
 
-  .hidden > img {
+  .header-container {
+    width: 100%;
+  }
+
+  .header-container > img {
     display: block;
+  }
+
+  .header-middle-part > input {
+    width: 50%;
+  }
+
+  .mobile-part {
+    display: block;
+    object-fit: contain;
+    padding-right: 20px;
+  }
+
+  .header-right-part {
+    display: none;
   }
 }

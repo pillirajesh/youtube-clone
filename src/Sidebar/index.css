@@ -22,6 +22,10 @@
   font-weight: 700;
 }
 
+.list-items:hover > span {
+  color: red;
+}
+
 @media screen and (max-width: 767px) {
   .icons {
     font-size: 15px;

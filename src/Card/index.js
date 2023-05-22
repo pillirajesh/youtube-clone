@@ -6,12 +6,7 @@ function Card(props) {
 
   return (
     <div className="video-card">
-      <img
-        src={thumbnailImage}
-        alt={channel}
-        className="thumbnail-image"
-        id="thumbnail"
-      />
+      <img src={thumbnailImage} alt={channel} className="thumbnail-image" />
 
       <div className="card-info">
         <img src={image} alt={channel} className="profile mr-2" />

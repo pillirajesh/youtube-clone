@@ -11,11 +11,11 @@ import "./index.css";
 
 function Videos() {
   let iconsList3 = [
-    { image: <AiFillHome /> },
-    { image: <MdOutlineSubscriptions /> },
-    { image: <AiOutlinePlusCircle /> },
-    { image: <MdVideoLibrary /> },
-    { image: <MdOutlineHistory /> },
+    { image: <AiFillHome />, name: "home" },
+    { image: <MdOutlineSubscriptions />, name: "subscription" },
+    { image: <AiOutlinePlusCircle />, name: "add-video" },
+    { image: <MdVideoLibrary />, name: "library" },
+    { image: <MdOutlineHistory />, name: "history" },
   ];
   return (
     <div className="videos-container">
@@ -180,7 +180,7 @@ function Videos() {
       </div>
       <ul className="footer-list">
         {iconsList3.map((icon) => (
-          <li key={icon.image} className="list-items">
+          <li key={icon.name} className="list-items">
             <span className="footer-icon">{icon.image}</span>
           </li>
         ))}

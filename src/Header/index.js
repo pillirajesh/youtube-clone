@@ -1,10 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { BiSearch } from "react-icons/bi";
-import { MdVideoCall, MdOutlineApps, MdNotifications } from "react-icons/md";
+import {
+  MdVideoCall,
+  MdOutlineApps,
+  MdNotifications,
+  MdCast,
+} from "react-icons/md";
 import "./index.css";
 
-function Header() {
+const Header = () => {
+  const [inputSearch, search] = useState("");
+
   return (
     <div className="header-container">
       <div className="header-left-part">
@@ -16,7 +23,13 @@ function Header() {
         />
       </div>
       <div className="header-middle-part">
-        <input type="text" className="input" placeholder="Search" />
+        <input
+          type="text"
+          className="input"
+          placeholder="Search"
+          value={inputSearch}
+          onChange={(e) => search(e.target.value)}
+        />
         <BiSearch className=" mr-4 icons search" />
       </div>
       <div className="header-right-part">
@@ -28,16 +41,21 @@ function Header() {
           alt="profile"
           className="profile"
         />
-        <div className="hidden">
-          <img
-            src="https://res.cloudinary.com/djoz0tmyl/image/upload/v1684313904/photo_-_Copy_c7lkcw.jpg"
-            alt="profile"
-            className="profile"
-          />
-        </div>
+      </div>
+
+      <div className="mobile-part">
+        <MdCast className="mr-3 icons" />
+        <MdNotifications className="mr-3 icons" />
+        <BiSearch className="mr-3 icons" />
+
+        <img
+          src="https://res.cloudinary.com/djoz0tmyl/image/upload/v1684313904/photo_-_Copy_c7lkcw.jpg"
+          alt="profile"
+          className="profile"
+        />
       </div>
     </div>
   );
-}
+};
 
 export default Header;

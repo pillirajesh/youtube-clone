@@ -41,11 +41,6 @@
 @media screenand and (max-width: 767px) {
   .video-card {
     width: 100%;
-    flex-grow: 0;
-  }
-
-  #thumbnail {
-    width: 100%;
   }
 
   .video-card > img {
